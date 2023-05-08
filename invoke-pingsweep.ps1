@@ -15,6 +15,7 @@ for ($o = 1; $o -lt 255; $o += 1) {
     $used.Add($res) | Out-Null
 }
 
+# Waiting 100ms for good connections to return
 Start-Sleep -Milliseconds 100
 
 # Adding Hits to arraylist by jobs completed sub 100ms
