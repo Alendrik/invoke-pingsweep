@@ -2,6 +2,10 @@
 ## Description
 A small program designed to ping the given internal network for quick host discovery.
 
+## Warnings
+1) Script will **ONLY** work on 192.168.1.0/24 networks as it currently stands.
+2) Will Create 255 powershell jobs as it runs. Be careful with greater network sizes, don't want too many jobs.
+
 
 ## Plans:
     - change from static 192.168.1.0/24 network
