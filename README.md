@@ -22,4 +22,6 @@ A small program designed to ping the given internal network for quick host disco
             -l, --limit 255, n
         - Job count 
             -n, 255, n
+    - Add Diff to compare previous output with new
+            -d, --diff 
 
