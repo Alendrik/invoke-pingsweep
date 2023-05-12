@@ -3,6 +3,8 @@
 
 #>
 
+$netId = Read-Host "Enter Network Id for scan: "
+
 # Initialize ArrayList for Hits
 $hits = [System.Collections.ArrayList]@() # Used for Hits within network
 $used = [System.Collections.ArrayList]@() # Used for job cleanup
@@ -11,7 +13,7 @@ $used = [System.Collections.ArrayList]@() # Used for job cleanup
 # Adding Jobs to "used" jobs arraylist to keep track of Ids for later dumping.
 for ($o = 1; $o -lt 255; $o += 1) {
     #Testing Connection
-    $res = Test-Connection "192.168.1.${o}" -Count 1 -AsJob # Creating Job for each host pinging
+    $res = Test-Connection "${netId}.${o}" -Count 1 -AsJob # Creating Job for each host pinging
     $used.Add($res) | Out-Null
 }
 
